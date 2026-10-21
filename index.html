@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header>
+            <h1>My To-Do List</h1>
+            <p>Plan your day. Get things done.</p>
+        </header>
+
+        <form id="task-form">
+            <label for="task-input">Task name</label>
+            <input
+                type="text"
+                id="task-input"
+                placeholder="What do you need to do?"
+                maxlength="150"
+                required
+            >
+
+            <div class="date-time">
+                <div>
+                    <label for="task-date">Due date</label>
+                    <input type="date" id="task-date">
+                </div>
+
+                <div>
+                    <label for="task-time">Due time</label>
+                    <input type="time" id="task-time">
+                </div>
+            </div>
+
+            <button type="submit" id="add-btn">+ Add Task</button>
+            <button type="button" id="cancel-btn" hidden>Cancel Edit</button>
+        </form>
+
+        <section class="task-section">
+            <div class="summary">
+                <span id="total-count">Total: 0</span>
+                <span id="pending-count">Pending: 0</span>
+                <span id="completed-count">Completed: 0</span>
+            </div>
+
+            <div class="filters">
+                <button type="button" class="filter active" data-filter="all">All</button>
+                <button type="button" class="filter" data-filter="pending">Pending</button>
+                <button type="button" class="filter" data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="task-list"></ul>
+            <p id="empty-message">No tasks yet. Add your first task!</p>
+        </section>
+
+        <footer>SkillCraft Technology | Task 04</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
